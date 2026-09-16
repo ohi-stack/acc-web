@@ -1,8 +1,8 @@
 {
   "name": "acc-web",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
-  "description": "ACC Web user interface for the Agent Command Console.",
+  "description": "Companion and historical ACC web-interface repository; canonical production frontend is maintained in ohi-stack/acc at acc.onegodian.com.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -18,5 +18,10 @@
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@types/node": "^22.13.10"
+  },
+  "onegodian": {
+    "canonicalProductionRepository": "ohi-stack/acc",
+    "canonicalProductionDomain": "acc.onegodian.com",
+    "status": "companion"
   }
 }
