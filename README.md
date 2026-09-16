@@ -9,7 +9,8 @@ The current primary application shell and production frontend live in:
 - Repository: `ohi-stack/acc`
 - Domain: `https://acc.onegodian.com`
 - ACC baseline: `v1.3.0`
-- Oru’Valen™ surface: `https://acc.onegodian.com/oru`
+- Oru’Valen™ surface: `https://acc.onegodian.com/oruvalen`
+- OMOS™ surface inside ACC: `https://acc.onegodian.com/omos`
 
 This repository remains a compatible companion web-module family and must not diverge into a competing ACC implementation.
 
@@ -20,7 +21,7 @@ ACC Web concerns presentation and operator interaction for surfaces such as:
 - operational dashboard
 - command center
 - Oru’Valen™ operational-intelligence support
-- OMOS™ integration status and outbound reasoning links
+- OMOS™ integration status and runtime visibility
 - agents
 - tasks
 - workflows
@@ -58,15 +59,16 @@ The ACC Agents registry remains for bounded agents, tools, workers, automations,
 
 ## Route standard
 
-Canonical ACC v1.3 Oru route:
+Canonical ACC v1.3 routes:
 
-- `/oru`
+- `/oruvalen`
+- `/omos`
 
-OMOS remains a separate governed reasoning platform at:
+The separate OMOS governed reasoning platform remains available at:
 
 - `https://omos.onegodian.com`
 
-Do not introduce a competing `/oruvalen` or local `/omos` production route unless the canonical `ohi-stack/acc` application is intentionally changed and versioned to support it.
+Do not introduce a competing `/oru` route or alternative local OMOS route unless the canonical `ohi-stack/acc` application is intentionally changed and versioned to support it.
 
 ## Repository status
 
