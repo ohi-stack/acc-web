@@ -1,6 +1,6 @@
 {
   "name": "acc-web",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": false,
   "description": "Companion ACC web-interface family; canonical production frontend is maintained in ohi-stack/acc at acc.onegodian.com.",
   "scripts": {
@@ -22,7 +22,8 @@
   "onegodian": {
     "canonicalProductionRepository": "ohi-stack/acc",
     "canonicalProductionDomain": "acc.onegodian.com",
-    "canonicalOruRoute": "/oru",
+    "canonicalOruRoute": "/oruvalen",
+    "canonicalOMOSRoute": "/omos",
     "status": "companion"
   }
 }
