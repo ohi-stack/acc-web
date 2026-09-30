@@ -8,15 +8,61 @@ The current primary application shell and production frontend live in:
 
 - Repository: `ohi-stack/acc`
 - Domain: `https://acc.onegodian.com`
-- ACC baseline: `v1.3.0`
+- Production baseline: `v1.3.0`
+- ACC V2 delegation foundation: `2.0.0-alpha.1` pre-release
 - Oru’Valen™ surface: `https://acc.onegodian.com/oruvalen`
 - OMOS™ surface inside ACC: `https://acc.onegodian.com/omos`
 
 This repository remains a compatible companion web-module family and must not diverge into a competing ACC implementation.
 
-## Canonical role
+## ACC V2 operator model
 
-ACC Web concerns presentation and operator interaction for surfaces such as:
+The primary operator experience is shifting from agent-centric navigation to an exception-driven command desk built around:
+
+- Projects
+- Persistent Responsibilities
+- Work Orders
+- Delegation
+- Needs My Attention
+- Running
+- Blocked
+- Completed
+- Opportunities
+- Approvals
+- Connections
+- Deployments
+- Verification
+- Audit
+
+Canonical operational chain:
+
+```text
+Project
+→ Responsibility
+→ Work Order
+→ Delegation
+→ Authorized Provider / Executor
+→ Approval
+→ Verification
+→ Deployment / Outcome
+→ Audit
+```
+
+The web layer displays and manages these records; it does not create execution authority.
+
+## Delegation surfaces
+
+Canonical V2 foundation routes include:
+
+- `/work-orders`
+- `/responsibilities`
+- `/delegation`
+
+The canonical API exposes provider maturity so the UI can visibly distinguish executable, external, and reserved providers. A provider name must never be rendered as operational merely because it exists in the registry.
+
+`openai-dot` is currently reserved and non-executable.
+
+## Existing operator surfaces
 
 - operational dashboard
 - command center
@@ -35,8 +81,6 @@ ACC Web concerns presentation and operator interaction for surfaces such as:
 - audit
 - system health
 
-ACC Web does not create execution authority.
-
 ## Authority rule
 
 ```text
@@ -44,8 +88,8 @@ Authorized Human Judgment
 → Oru’Valen™ context and continuity
 → OMOS™ governed reasoning / Decision Record
 → Human gate
-→ ACC™ authorized execution
-→ agents / tools / adapters
+→ ACC™ Work Order and authorized execution
+→ agents / tools / adapters / providers
 → verification + audit
 ```
 
@@ -57,21 +101,8 @@ Oru’Valen is the O-H-I Twin / operational intelligence layer. It is not classi
 
 The ACC Agents registry remains for bounded agents, tools, workers, automations, and executors controlled through ACC.
 
-## Route standard
-
-Canonical ACC v1.3 routes:
-
-- `/oruvalen`
-- `/omos`
-
-The separate OMOS governed reasoning platform remains available at:
-
-- `https://omos.onegodian.com`
-
-Do not introduce a competing `/oru` route or alternative local OMOS route unless the canonical `ohi-stack/acc` application is intentionally changed and versioned to support it.
-
 ## Repository status
 
 `acc-web` is a **companion** repository. Before adding a production feature here, confirm that it does not belong in `ohi-stack/acc`, `ohi-stack/acc-oruvalen`, or another dedicated ACC service repository.
 
-Synchronized to ACC platform `v1.3.0` architecture on September 16, 2026.
+Production status requires separate deployment and runtime verification on `acc.onegodian.com`.
