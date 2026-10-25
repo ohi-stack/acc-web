@@ -75,3 +75,14 @@ Do not introduce a competing `/oru` route or alternative local OMOS route unless
 `acc-web` is a **companion** repository. Before adding a production feature here, confirm that it does not belong in `ohi-stack/acc`, `ohi-stack/acc-oruvalen`, or another dedicated ACC service repository.
 
 Synchronized to ACC platform `v1.3.0` architecture on September 16, 2026.
+
+## Unified Console Alignment — October 2026
+
+The OHI Command Console and Agent Command Console are **one** operator experience hosted at `https://acc.onegodian.com`. The production shell and primary source of truth are in `ohi-stack/acc`. This repository supplies compatible frontend modules only.
+
+Related sources:
+- `ohi-stack/acc` — canonical OHI + Agent Command Console.
+- `ohi-stack/ohi-control-plane` — backend policy, risk, approval and authorization service.
+- `ohi-stack/quantumohi-platform` — public QuantumOHI site at `https://quantumohi.com`.
+
+Frontend integration must use approved authenticated APIs; never store privileged service keys in browser code, infer authorization from UI state, or represent placeholder data as live service health. Reuse the ACC navigation, branding, permissions and versioned contracts. Deployment and route availability require separate verification.
